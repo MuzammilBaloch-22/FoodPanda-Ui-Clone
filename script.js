@@ -217,6 +217,24 @@ if (valueButtons.length > 0 && valueTitleEl && valueTextEl && valueImgEl) {
 
 
 
+// Hamburger Menu Toggle for Culture Page
+const cultureMenuBtn = document.getElementById('mobile-menu-button');
+const cultureMobileMenu = document.getElementById('mobile-menu');
+if (cultureMenuBtn && cultureMobileMenu) {
+    cultureMenuBtn.addEventListener('click', () => {
+        cultureMobileMenu.classList.toggle('hidden');
+    });
+}
+
+// View More Functionality
+const viewMoreBtn = document.getElementById('view-more-btn');
+const extraCards = document.querySelectorAll('.extra-card');
+if (viewMoreBtn && extraCards.length > 0) {
+    viewMoreBtn.addEventListener('click', () => {
+        extraCards.forEach(card => card.classList.toggle('card-hidden'));
+        viewMoreBtn.innerText = viewMoreBtn.innerText === 'VIEW ALL' ? 'SHOW LESS' : 'VIEW ALL';
+    });
+}
 
 
 
